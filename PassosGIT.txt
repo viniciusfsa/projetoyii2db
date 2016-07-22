@@ -1,0 +1,89 @@
+Working Directory ----git add-----> Staging Area ----git commit---->Git Directory
+
+
+1 - Baixar git 
+https://git-scm.com
+
+2 - Definir Nome
+$ git config --global user.name "Marcus Vinicius"
+
+3 - Definir Email
+$ git config --global user.email "viniciusfsa@gmail.com"
+
+4 - Botão direito no atalho de git Bach e definir para iniciar em C:/Wamp/www
+
+5 - na pasta desejada para gerenciar repositório:
+	- git init (cria repositório git)
+	- git status (verifica status do repositorio)
+	- git add (git add. , git add *.txt , git add arquivo.txt , etc)
+	- git commit (comita o código.)
+		-  git commit -m "mensagem"
+		-  git commit -a -m "mensagem" (pula a etapa do git add)
+	- git diff (Ver alterações feitas nos arquivos no Working Directory)
+	- git diff --staged (Ver alterações feitas nos arquivos na Staging Area)  
+	- git log (log de commits feitos, informando chave do commit, autor e email configurado)
+	- git log -p(mesmo logo anterior, adicionando os detalhes das modificações)
+	- git log -n (onde n é o número de logs que se deseja ver. git log -1, por exemplo, traz o último commit. Esse comando tb pode ter o parametro -p anterior)
+	- git log --pretty=oneline (traz o log resumido com chave e mensagem dos commits)
+	- gitk (traz interface gráfica para gerenciamento de log)
+	ss
+	- git commit --amend -m "mensagem" (comita o ultimo commit. Permite editar o ultimo commit, adicionando novas mudanças sem precisar criar outro commit, o comando não gera um novo commit, inclusive altera a chave do commit editado)
+	- git reset HEAD nomeDoArquivo.Extensao (uma vez que o arquivo esteja na Stagin Area, pode ser removido com esse comando)
+	- git checkout -- nomeDoArquivo.Extensao (desfaz alterações de um arquivo, trazendo a versão do arquivo que está no último commit)
+	- git rm nomeDoArquivo.Extensao (remove um arquivo comitado)
+
+
+6 - Gerenciamento de tags/versões
+	- git tag (vê todas as tags existentes)
+	- git tag show nomeDaTag (mostra detalhes da tag escolhida)
+	- git tag -a nomeDaTag(v1.0, v2.1, etc) -m "mensagem (Versão 1.0)" (Adiciona uma tag a versão atual)
+	- git tag -a nomeDaTag(v1.0, v2.1, etc) chaveDoCommit -m mensagem(Adiciona uma tag a um commit escolhido)
+	- git checkout codigo (Baixa uma versão comitada. Codigo pode ser um codigo da tag, um codigo do commit ou master, pra trazer o ultimo commit)
+
+7 - Gerenciamento de branch
+	O git por padrão trabalha no branch master. Outros branchs podem ser criados. Interessante quando se quer criar uma versão de teste sem interferir na versão master, oficial. 
+	- git branch teste (Cria branch teste)
+	- git checkout teste (coloca o working directory no ambiente/branch de teste. Muda o ambiente)
+	- git checkout -b teste (realiza os dois comandos anteriores ao mesmo tempo)
+	- git merge teste (dentro do branch a ser atualizado, traz o que tem de novo no branch teste)
+
+8 - Utilizando repositório em rede
+	- git init --bare (Criar Repositório Remoto - abrir o bash no diretório remoto que vai ser o servidor. O Git deve estar instalado no servidor)
+	- git clone file:////EndereçoRemotoDoServidorGitCriado nomePastaASerCriada (Clona o projeto criado no servidor para a máquina local. Esse procedimento é feito uma primeira vez)
+	- git push //EndereçoRemotoDoServidorGitCriado master (Esse comando permite o modo inverso, ao invés de clonar, envia da máquina local para o repositório na rede)
+	- git remote (mostra os repositorios remotos que existem para determinado projeto git)
+	- git remote -v (detalha os repositorios)
+	- git remote add nomeDoRepositorio EnderecoRepositorio (Cria repositorio remoto. Interessante para não ter que digitar os endereços no momento do push)
+		PS. Quando feito um clone de um projeto git do servidor (passo 2), um remote já vem criado, com o nome origin. Se a cópia for feita no modo inverso (passo 3), aconselha-se criar um remote pra não ter que ficar digitando o endereço remoto no momento do push
+	- git pull origin master (traz alterações do servidor para local)
+
+
+9 - GITHUB
+	- É necessário dar permissão da máquina no github
+	- Abrir bash e gerar chave: ssh-keygen
+	- Ir no local que essa chave foi gerada, copiar o conteudo do arquivo, e adicionar chave no github
+
+
+6 - Outras informações
+	- quando usado git status: Arquivos em Vermelho estão no Working Directory e não foram comitados, Arquivos em Verde estão na Staging Area e prontos para serem comitados, 
+
+
+
+
+
+
+
+
+
+
+	Resumo:
+	1 - Criar Repositório Remoto (abrir o bash no diretório remoto que vai ser o servidor)
+		git init --bare 
+	2 - No Repositório local (abrir o bash no diretório que é o repositório local)
+		git init (caso o git ainda não tenha sido criado nesse diretório)
+		git add . (prepara todos os arquivos deste diretório para o coomit)
+		git commit -m "Mensagem de Commit" (comita localmente)
+		git push //lira/desenvolvimento/repositorio master
+	3 - No repositório que se deseja baixar
+		git init (caso o git ainda não tenha sido criado nesse diretório)
+		git pull //lira/desenvolvimento/repositorio/projeto1
