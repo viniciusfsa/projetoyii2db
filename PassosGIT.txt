@@ -76,6 +76,7 @@ $ git config --global user.email "viniciusfsa@gmail.com"
 
 
 
+
 	Resumo:
 	1 - Criar Repositório Remoto (abrir o bash no diretório remoto que vai ser o servidor)
 		git init --bare 
