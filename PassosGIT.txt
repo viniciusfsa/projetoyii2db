@@ -1,6 +1,6 @@
 Working Directory ----git add-----> Staging Area ----git commit---->Git Directory
 
----Marcus Vinicius
+---Marcus Vinicius Araujo Martins
 
 
 1 - Baixar git 
