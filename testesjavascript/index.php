@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
     <!--<script	type="text/javascript" src="localizaString.js">	</script>	-->
 	<!--<script	type="text/javascript" src="horasDormidas.js">	</script>	-->
-	<script	type="text/javascript" src="dragao.js">	</script>
+	<!--<script	type="text/javascript" src="dragao.js">	</script>			-->
+	<script	type="text/javascript" src="friends.js">	</script>
   </head>
   
   <body>
