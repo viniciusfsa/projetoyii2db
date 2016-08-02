@@ -1,5 +1,7 @@
 Working Directory ----git add-----> Staging Area ----git commit---->Git Directory
 
+---Marcus Vinicius Araujo Martins mm
+
 
 1 - Baixar git 
 https://git-scm.com
@@ -66,6 +68,7 @@ $ git config --global user.email "viniciusfsa@gmail.com"
 
 6 - Outras informações
 	- quando usado git status: Arquivos em Vermelho estão no Working Directory e não foram comitados, Arquivos em Verde estão na Staging Area e prontos para serem comitados, 
+
 
 
 
