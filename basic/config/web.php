@@ -19,6 +19,10 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
+        'myComponent' => [
+            'class' => 'app\classes\components\MyComponent',
+            'string' => 'Yii2 videos'
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
